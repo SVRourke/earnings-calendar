@@ -1,0 +1,700 @@
+{
+	"info": {
+		"_postman_id": "80fe4410-6183-4f94-9a08-1290c33c7a90",
+		"name": "FINNHUB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Peers",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "bp03ocnrh5r90eafo9c0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/stock/peers?symbol=INO&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"stock",
+						"peers"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "INO"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				},
+				"description": "find a symbols peers"
+			},
+			"response": []
+		},
+		{
+			"name": "GET COMPANY METRICS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/stock/metric?symbol=AAPL&metric=financialStrength&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"stock",
+						"metric"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "AAPL",
+							"description": "company symbol"
+						},
+						{
+							"key": "metric",
+							"value": "financialStrength",
+							"description": "can be: price, valuation, growth, margin, management, financialStrength, perShare"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				},
+				"description": "price, valuation, growth, margin, management, financialStrength, perShare"
+			},
+			"response": []
+		},
+		{
+			"name": "Aggregate opinion TA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/scan/technical-indicator?symbol=AAPL&resolution=60&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"scan",
+						"technical-indicator"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "AAPL"
+						},
+						{
+							"key": "resolution",
+							"value": "60",
+							"description": "can be: 1, 5, 15, 30, 60, D, W, M"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company Executives",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/stock/executive?symbol=tsla&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"stock",
+						"executive"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "tsla"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "General News",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/news?category=forex&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"news"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "forex",
+							"description": "can be: general, forex, crypto, merger"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COMPANY SPECIFIC NEWS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/company-news?symbol=GILD&from=2020-04-30&to=2020-05-01&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"company-news"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "GILD",
+							"description": "Stock Symbol"
+						},
+						{
+							"key": "from",
+							"value": "2020-04-30",
+							"description": "YYYY-MM-DD"
+						},
+						{
+							"key": "to",
+							"value": "2020-05-01",
+							"description": "YYYY-MM-DD"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company MAjor Developments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/major-development?symbol=GILD&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"major-development"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "GILD",
+							"description": "STOCK SYMBOL"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEWs SENTIMENT SPECIFIC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/news-sentiment?symbol=GILD&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"news-sentiment"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "GILD"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IPO CALENDAR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/calendar/ipo?from=2020-05-1&to=2020-012-30&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"calendar",
+						"ipo"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2020-05-1",
+							"description": "START DATE"
+						},
+						{
+							"key": "to",
+							"value": "2020-012-30",
+							"description": "END DATE"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ANALYST RECOMMENDATION",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/stock/recommendation?symbol=AAPL&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"stock",
+						"recommendation"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "AAPL",
+							"description": "SYMBOL"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "price target symbol",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/stock/price-target?symbol=NFLX&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"stock",
+						"price-target"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "NFLX",
+							"description": "SYMBOL"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPGRADES & DOWNGRADE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/stock/upgrade-downgrade?symbol=SPOT&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"stock",
+						"upgrade-downgrade"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "SPOT"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				},
+				"description": "symbol\r\nCompany symbol.\r\n\r\ngradeTime\r\nUpgrade/downgrade time in UNIX timestamp.\r\n\r\nfromGrade\r\nFrom grade.\r\n\r\ntoGrade\r\nTo grade.\r\n\r\nCompany\r\nCompany/analyst who did the upgrade/downgrade.\r\n\r\naction\r\nAction can take any of the following values: up(upgrade), down(downgrade), main(maintains), init(initiate), reit(reiterate)."
+			},
+			"response": []
+		},
+		{
+			"name": "EPS estimate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/stock/eps-estimate?symbol=AAPL&token=bp03ocnrh5r90eafo9c0&freq=quarterly",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"stock",
+						"eps-estimate"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "AAPL"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						},
+						{
+							"key": "freq",
+							"value": "quarterly",
+							"description": "can be: annual, quarterly"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Earnings Surprise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/stock/earnings?symbol=AAPL&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"stock",
+						"earnings"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "AAPL"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EARNINGS CALENDAR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/calendar/earnings?from=2020-05-10&to=2020-05-15&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"calendar",
+						"earnings"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2020-05-10",
+							"description": "START: YYYY-MM-DD"
+						},
+						{
+							"key": "to",
+							"value": "2020-05-15",
+							"description": "END: YYYY-MM-DD"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ECONOMIC CALENDAR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/calendar/economic?token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"calendar",
+						"economic"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "symbol quote",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/quote?symbol=AAPL&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"quote"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "AAPL"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				},
+				"description": "o: open price day\r\nh: high of day\r\nl: low of day\r\nc: current price\r\npc: previous close\r\nt: unix timestamp"
+			},
+			"response": []
+		},
+		{
+			"name": "get economic data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/economic?code=MA-USA-656880&token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"economic"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "MA-USA-656880"
+						},
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list economic codes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finnhub.io/api/v1/economic/code?token=bp03ocnrh5r90eafo9c0",
+					"protocol": "https",
+					"host": [
+						"finnhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"economic",
+						"code"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "bp03ocnrh5r90eafo9c0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "bp03ocnrh5r90eafo9c0",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "616e5833-d24f-4f24-bd6a-462dec393de6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "eebd4ca5-1c80-47ec-9431-0c3526a26979",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
