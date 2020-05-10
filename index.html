@@ -4,71 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Earnings Calendar</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <!-- EARNINGS CALENDAR -->
-    <div>
-        <!-- <button>
-            5 days
-        </button>
+    <section  class="card">
 
-        <button>
-            10 days
-        </button>
-
-        <button>
-            30 days
-        </button> -->
-
-        <section  class="card">
-
-            <!--  COMPANY INFO -->
-            <div class="card-hero">
-                <!-- symbol -->
-                <span class="symbol">VFC</span>
-                <!-- date -->
-                <span class="date">05-15</span>
-                
+        <!--  COMPANY INFO -->
+        <div class="card-hero">
+            <!-- symbol -->
+            <div class="symbol">
+                <span>
+                    VFC
+                </span>
+            </div>
+            <!-- date -->
+            <div class="date">
+                <span>
+                    05-15
+                </span>
             </div>
             
-            <div class="card-content">
-                <div class="top">
-                    <!-- price -->
-                    <span class="price">$58.23</span>
-                    <!-- release time -->
-                    <span class="release-time">Time: Pre-Market</span>
-                    <!-- EPS estimate -->
-                    <span class="eps-estimate">EPS Estimate: $0.33</span>
-                    <!-- revenue estimate -->
-                    <span class="revenue-estimate">Revenue Estimate: $2,310,000,000</span>
+        </div>
+        
+        <div class="card-content">
+            <div class="top">
+                <!-- price -->
+                <div class="price">
+                    <span>
+                        $58.23
+                    </span>
                 </div>
-
-                <div class="bottom">
-                    <!-- NEWS SENTIMENT -->
-                    <!-- articles past week -->
-                    <span>Article Count (wk): 96</span>
-                    <!-- average -->
-                    <span>Average Count (wk): 172.25</span>
-                    <!-- buzz -->
-                    <span>Buzz: 0.5573</span>
-                    <!-- sentiment bearishpercent bullishpercent -->
-                    <span>BUY: 70|30 :SELL</span>
-
-                    <!-- TA AGREGATE OPINION -->
-                    <!-- buy / neutral / sell -->
-                    <span>Buy/Neutral/Sell: 11/6/0</span>
-                    <!-- signal -->
-                    <span>Signal: Strong Buy</span>
-                    <!-- istrending -->
-                    <span>Trending: Currently Trending</span>
+                <!-- release time -->
+                <div class="release-time">
+                    <span>
+                        Pre-Market
+                    </span>
+                </div>
+                <!-- EPS estimate -->
+                <div class="eps-estimate">
+                    <span>
+                        Est EPS: $0.33
+                    </span>
+                </div>
+                <!-- revenue estimate -->
+                <div class="revenue-estimate">
+                    <span>
+                        Est. Revenue: $2,310,000,000
+                    </span>
                 </div>
             </div>
 
+            <div class="bottom">
+                <!-- NEWS SENTIMENT -->
+                <!-- articles past week -->
+                <div class="articlecount">
+                    <p>
+                        Average V Article Count (wk): 96/172.25</div>
+                    </p>
+                <!-- buzz -->
+                <div class="buzz">
+                    <p>
+                        Buzz: 0.5573
+                    </p>
+                </div>
+                <!-- sentiment bearishpercent bullishpercent -->
+                <div class="sentiment">
+                    <p>
+                        BUY:70|30:SELL
+                    </p>
+                </div>
 
-        </section>
+                <!-- TA AGREGATE OPINION -->
+                <!-- buy / neutral / sell -->
+                <div class="tasentiment">
+                    <p>
+                        Buy/Neutral/Sell: 11/6/0
+                    </p>
+                </div>
+                <!-- signal -->
+                <div class="tasignal">
+                    <p>
+                        Signal: Strong Buy
+                    </p>
+                </div>
+                <!-- istrending -->
+                <div class="istrending">
+                    <p>
+                        Currently Trending
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    </div>
+
+    </section>
 </body>
 </html>

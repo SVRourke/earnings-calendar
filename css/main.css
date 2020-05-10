@@ -1,8 +1,12 @@
 :root {
-    /* colors */
+    /* ==============
+    colors 
+    ===============*/
     --card-background: red;
 
-    /* font styling */
+    /*=============== 
+    font styling 
+    ================*/
     --font-one: Arial;
     --large-font-size: 3em;
     --medium-font-size: 1.1em;
@@ -15,25 +19,30 @@
     size: 20px;
     font-family: var(--font-one);
 }
-
 .card {
-    margin: .5rem .2rem .5rem .2rem;
-    border: solid black 1px;
+    width: 75%;
+    margin: 0 auto;
+    border: solid rgb(151, 153, 151) 4px;
+    border-radius: 1em;
     display: grid;
     grid-template-areas:
     "HERO CONTENT";
-    column-gap: 1em;
+    column-gap: 0;
 }
-
 .card-hero {
+    padding: 0em 2em;
     grid-area: HERO;
-    border-right: solid black 1px;
+    border-right: solid rgb(151, 153, 151) 4px;
     display: grid;
     grid-template-rows: 2fr 2fr;
     grid-template-areas:
     "DATE"
     "SYMBOL";
 
+}
+.card-hero div {
+    display: flex;
+    justify-content: center;
 }
 .card-hero span {
     text-align: center;
@@ -48,13 +57,10 @@
 .date {
     grid-area: DATE;
     font-size: var(--large-font-size);
-    
+    align-items:flex-end;
 }
 .price {
-
 }
-
-
 .card-content {
     grid-area: CONTENT;
     display: grid;
@@ -63,14 +69,71 @@
     grid-template-areas:
     "TOP"
     "BOTTOM";
-
 }
 .top {
+    /* padding: 1em .3em ; */
     grid-area: TOP;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "badge revenue"
+    "badge eps"
+    "badge price";
 }
+.top div {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border: solid black 1px;
+}
+.price {
+    grid-area: price;
+    text-align: center;
+}
+.release-time {
+    grid-area: badge;
+    /* text-align: center; */
+}
+.eps-estimate {grid-area: eps;}
+.revenue-estimate {grid-area: revenue;}
 .bottom {
+    border-top: solid black 1px;
     grid-area: BOTTOM;
+    display: grid;
+    /* grid-template-rows: repeat(4, 1fr); */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "sent aac-ac"
+    "sent buzz"
+    "tasignal tasent"
+    "tasignal trend";
 }
-.bottom span {
-    display: block;
+.bottom div {
+    border: solid black 1px;
+    display: flex;
+}
+.bottom div p {
+    margin: auto;
+}
+.articlecount {
+    grid-area: aac-ac;
+}
+.averagearticles {
+    grid-area: aac;
+}
+.buzz {
+    grid-area: buzz;
+}
+.sentiment {
+    grid-area: sent;
+}
+.tasentiment {
+    grid-area: tasent;
+}
+.tasignal {
+    grid-area: tasignal;
+}
+.istrending {
+    grid-area: trend;
+
 }
