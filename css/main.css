@@ -22,6 +22,7 @@
 .card {
     width: 75%;
     margin: 0 auto;
+    margin-bottom: .5em;
     border: solid rgb(151, 153, 151) 4px;
     border-radius: 1em;
     display: grid;
@@ -52,7 +53,6 @@
     grid-area: SYMBOL;
     font-size: var(--large-font-size);
     font-weight: 900;
-    /* line-height: 1.5em; */
 }
 .date {
     grid-area: DATE;
@@ -71,7 +71,6 @@
     "BOTTOM";
 }
 .top {
-    /* padding: 1em .3em ; */
     grid-area: TOP;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -84,7 +83,6 @@
     display: flex;
     align-items:center;
     justify-content: center;
-    border: solid black 1px;
 }
 .price {
     grid-area: price;
@@ -92,7 +90,6 @@
 }
 .release-time {
     grid-area: badge;
-    /* text-align: center; */
 }
 .eps-estimate {grid-area: eps;}
 .revenue-estimate {grid-area: revenue;}
@@ -101,15 +98,15 @@
     grid-area: BOTTOM;
     display: grid;
     /* grid-template-rows: repeat(4, 1fr); */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr;
     grid-template-areas:
-    "sent aac-ac"
-    "sent buzz"
-    "tasignal tasent"
-    "tasignal trend";
+    "sent tasignal aac-ac"
+    "sent tasignal buzz"
+    "sent tasignal tasent"
+    "sent tasignal trend";
 }
 .bottom div {
-    border: solid black 1px;
+    /* border: solid black 1px; */
     display: flex;
 }
 .bottom div p {
@@ -117,9 +114,6 @@
 }
 .articlecount {
     grid-area: aac-ac;
-}
-.averagearticles {
-    grid-area: aac;
 }
 .buzz {
     grid-area: buzz;
