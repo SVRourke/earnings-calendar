@@ -1,0 +1,76 @@
+:root {
+    /* colors */
+    --card-background: red;
+
+    /* font styling */
+    --font-one: Arial;
+    --large-font-size: 3em;
+    --medium-font-size: 1.1em;
+    --small-font-size: 1em;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    size: 20px;
+    font-family: var(--font-one);
+}
+
+.card {
+    margin: .5rem .2rem .5rem .2rem;
+    border: solid black 1px;
+    display: grid;
+    grid-template-areas:
+    "HERO CONTENT";
+    column-gap: 1em;
+}
+
+.card-hero {
+    grid-area: HERO;
+    border-right: solid black 1px;
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas:
+    "DATE"
+    "SYMBOL";
+
+}
+.card-hero span {
+    text-align: center;
+    font-weight: 900;
+}
+.symbol {
+    grid-area: SYMBOL;
+    font-size: var(--large-font-size);
+    font-weight: 900;
+    /* line-height: 1.5em; */
+}
+.date {
+    grid-area: DATE;
+    font-size: var(--large-font-size);
+    
+}
+.price {
+
+}
+
+
+.card-content {
+    grid-area: CONTENT;
+    display: grid;
+    grid-template-columns: 1 1fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas:
+    "TOP"
+    "BOTTOM";
+
+}
+.top {
+    grid-area: TOP;
+}
+.bottom {
+    grid-area: BOTTOM;
+}
+.bottom span {
+    display: block;
+}
